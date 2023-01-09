@@ -1,5 +1,9 @@
 import instagram from '../../assets/contacts/instagram.svg';
 import facebook from '../../assets/contacts/facebook.svg';
+import { NavLink } from 'react-router-dom';
+import { pathes } from '../../constants/url';
+
+const { about, portfolio, shopArt, shopNature, blog } = pathes;
 import './header.css';
 import { Link } from '../Link/Link';
 export const Header = () => {
@@ -26,9 +30,12 @@ export const Header = () => {
               <nav className="site-navigation text-right ml-auto " role="navigation">
                 <ul className="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
                   <li>
-                    <a href="#about" className="nav-link">
+                    <NavLink to={about} className="nav-link">
                       About
-                    </a>
+                    </NavLink>
+                    {/* <a href="#about" className="nav-link">
+                      About
+                    </a> */}
                   </li>
                   <li className="has-children">
                     <a href="#about-section" className="nav-link">
@@ -36,27 +43,27 @@ export const Header = () => {
                     </a>
                     <ul className="dropdown arrow-top">
                       <li>
-                        <a href="#art" className="nav-link">
+                        <NavLink to={'/' + shopArt} className="nav-link">
                           Art
-                        </a>
+                        </NavLink>
                       </li>
                       <li>
-                        <a href="#nature" className="nav-link">
+                        <NavLink to={'/' + shopNature} className="nav-link">
                           Nature
-                        </a>
+                        </NavLink>
                       </li>
                     </ul>
                   </li>
 
                   <li>
-                    <a href="#portfolio" className="nav-link">
+                    <NavLink to={'/' + portfolio} className="nav-link">
                       Portfolio
-                    </a>
+                    </NavLink>
                   </li>
                   <li>
-                    <a href="#blog" className="nav-link">
+                    <NavLink to={'/' + blog} className="nav-link">
                       Blog
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="has-children">
                     <a href="#about-section" className="nav-link">

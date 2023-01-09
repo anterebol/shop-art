@@ -1,3 +1,5 @@
 import './about.css';
 
-export const About = () => <div>About</div>;
+export const About = () => {
+  return <div>About</div>;
+};

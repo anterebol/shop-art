@@ -1,3 +1,5 @@
 import './portfolio.css';
 
-export const Gallery = () => <div>Gallery</div>;
+export const Portfolio = () => {
+  return <div>Portfolio</div>;
+};

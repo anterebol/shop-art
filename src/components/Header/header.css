@@ -11,6 +11,9 @@
 .nav-link > img {
   margin-right: 10px;
 }
+.nav-link:hover {
+  color: orange;
+}
 .dropdown.contacts > li > a {
   padding: 0.5rem 1rem !important;
 }

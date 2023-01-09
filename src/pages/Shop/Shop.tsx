@@ -1,3 +1,3 @@
 import './shop.css';
 
-export const Main = () => <div>Main</div>;
+export const Shop = (props: { shopType: string }) => <div>Shop</div>;
