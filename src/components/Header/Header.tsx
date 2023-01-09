@@ -1,4 +1,7 @@
+import instagram from '../../assets/contacts/instagram.svg';
+import facebook from '../../assets/contacts/facebook.svg';
 import './header.css';
+import { Link } from '../Link/Link';
 export const Header = () => {
   return (
     <>
@@ -42,20 +45,6 @@ export const Header = () => {
                           Nature
                         </a>
                       </li>
-                      <li className="has-children">
-                        <a href="#">More Links</a>
-                        <ul className="dropdown">
-                          <li>
-                            <a href="#">Menu One</a>
-                          </li>
-                          <li>
-                            <a href="#">Menu Two</a>
-                          </li>
-                          <li>
-                            <a href="#">Menu Three</a>
-                          </li>
-                        </ul>
-                      </li>
                     </ul>
                   </li>
 
@@ -69,10 +58,18 @@ export const Header = () => {
                       Blog
                     </a>
                   </li>
-                  <li>
-                    <a href="#contact-section" className="nav-link">
-                      Contact
+                  <li className="has-children">
+                    <a href="#about-section" className="nav-link">
+                      Contacts
                     </a>
+                    <ul className="dropdown arrow-top contacts">
+                      <li>
+                        <Link icon={instagram} text="Instagram" link="https://www.instagram.com/" />
+                      </li>
+                      <li>
+                        <Link icon={facebook} text="Facebook" link="https://www.facebook.com/" />
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </nav>

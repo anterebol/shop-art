@@ -1,10 +1,30 @@
 .toggle-button {
   text-align: right;
 }
-.nav-link {
+.nav-link, .dropdown-next-level{
   font-size: 12px;
   text-transform: uppercase;
   color: #303133;
   opacity: .7;
   /* padding: 0 !important; */
+}
+.nav-link > img {
+  margin-right: 10px;
+}
+.dropdown.contacts > li > a {
+  padding: 0.5rem 1rem !important;
+}
+.dropdown {
+  width: 150px !important;
+}
+.dropdown.contacts {
+  display: grid;
+  /* justify-content: center; */
+  width: 120px !important;
+}
+.bi-instagram {
+  /* background: red; */
+  width: 30px;
+  height: 30px;
+  color: red;
 }

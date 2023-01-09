@@ -575,7 +575,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1080px;
+    max-width: 1140px;
   }
 }
 
@@ -2539,6 +2539,16 @@ textarea.form-control {
     margin-top: 0;
     margin-right: 0.25rem;
     margin-left: 0;
+  }
+  .dropdown {
+    padding: 0;
+    border-top: 2px solid orange !important;
+  }
+  .dropdown > li {
+    min-width: 0 !important;
+  }
+  .dropdown-next-level {
+    width: 150px;
   }
   .form-inline .custom-control {
     -webkit-box-align: center;
