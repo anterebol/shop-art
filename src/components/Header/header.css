@@ -1,0 +1,10 @@
+.toggle-button {
+  text-align: right;
+}
+.nav-link {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #303133;
+  opacity: .7;
+  /* padding: 0 !important; */
+}
