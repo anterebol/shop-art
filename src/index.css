@@ -3,11 +3,14 @@
   padding: 0;
 }
 body {
-  min-height: 100vh;
+  min-height: 100vh !important;
   position: relative;
 }
-.app {
-  height: 100%;
+body.portfolio {
+  background: #f7f7f7;
+}
+#app {
+  min-height: 100vh;
   position: relative;
   bottom: 0;
 }
@@ -21,4 +24,6 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(211, 205, 205);    /* цвет плашки */
   border-radius: 10px;       /* закругления плашки */
 }
-
+li {
+  list-style: none;
+}

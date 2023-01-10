@@ -7,7 +7,7 @@ import { About } from './pages/About/About';
 import { Shop } from './pages/Shop/Shop';
 import { Blog } from './pages/Current/Blog';
 
-const { shopArt, shopNature, about, blog, portfolio } = pathes;
+const { shop, about, blog, portfolio } = pathes;
 function App() {
   return (
     <Routes>
@@ -28,18 +28,10 @@ function App() {
         }
       ></Route>
       <Route
-        path={shopArt}
+        path={shop}
         element={
           <FullPage>
             <Shop shopType="art" />
-          </FullPage>
-        }
-      ></Route>
-      <Route
-        path={shopNature}
-        element={
-          <FullPage>
-            <Shop shopType="nature" />
           </FullPage>
         }
       ></Route>

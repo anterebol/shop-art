@@ -1,12 +1,18 @@
 import instagram from '../../assets/contacts/instagram.svg';
 import facebook from '../../assets/contacts/facebook.svg';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
+import { INSTAGRAM_LINK, FACEBOOK_LINK } from '../../constants/links';
 import { pathes } from '../../constants/url';
 
-const { about, portfolio, shopArt, shopNature, blog } = pathes;
+const { about, portfolio, shop, blog } = pathes;
 import './header.css';
 import { Link } from '../Link/Link';
+import { useEffect } from 'react';
 export const Header = () => {
+  const { hash } = useLocation();
+  useEffect(() => {
+    console.log(hash);
+  }, [hash]);
   return (
     <>
       <div className="site-mobile-menu site-navbar-target">
@@ -33,22 +39,27 @@ export const Header = () => {
                     <NavLink to={about} className="nav-link">
                       About
                     </NavLink>
-                    {/* <a href="#about" className="nav-link">
-                      About
-                    </a> */}
                   </li>
                   <li className="has-children">
-                    <a href="#about-section" className="nav-link">
+                    <a href="#" className="nav-link">
                       Shop
                     </a>
                     <ul className="dropdown arrow-top">
                       <li>
-                        <NavLink to={'/' + shopArt} className="nav-link">
+                        <NavLink
+                          to={'/' + 'shop' + '#' + 'art'}
+                          className={['nav-link', hash === '#art' ? 'active-link' : ''].join(' ')}
+                        >
                           Art
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink to={'/' + shopNature} className="nav-link">
+                        <NavLink
+                          to={'/' + 'shop' + '#' + 'nature'}
+                          className={['nav-link', hash === '#nature' ? 'active-link' : ''].join(
+                            ' '
+                          )}
+                        >
                           Nature
                         </NavLink>
                       </li>
@@ -71,10 +82,10 @@ export const Header = () => {
                     </a>
                     <ul className="dropdown arrow-top contacts">
                       <li>
-                        <Link icon={instagram} text="Instagram" link="https://www.instagram.com/" />
+                        <Link icon={instagram} text="Instagram" link={INSTAGRAM_LINK} />
                       </li>
                       <li>
-                        <Link icon={facebook} text="Facebook" link="https://www.facebook.com/" />
+                        <Link icon={facebook} text="Facebook" link={FACEBOOK_LINK} />
                       </li>
                     </ul>
                   </li>

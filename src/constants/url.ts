@@ -4,6 +4,7 @@ export const pathes = {
   about: '/',
   blog: 'blog',
   portfolio: 'portfolio',
-  shopArt: 'shop/art',
-  shopNature: 'shop/nature',
+  shop: 'shop',
+  art: 'art',
+  nature: 'nature',
 };

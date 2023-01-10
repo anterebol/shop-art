@@ -5,14 +5,12 @@
   font-size: 12px;
   text-transform: uppercase;
   color: #303133;
+}
+header.nav-link {
   opacity: .7;
-  /* padding: 0 !important; */
 }
 .nav-link > img {
   margin-right: 10px;
-}
-.nav-link:hover {
-  color: orange;
 }
 .dropdown.contacts > li > a {
   padding: 0.5rem 1rem !important;
@@ -22,7 +20,6 @@
 }
 .dropdown.contacts {
   display: grid;
-  /* justify-content: center; */
   width: 120px !important;
 }
 .bi-instagram {

@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: rgb(21, 21, 21);
+}
+.footer-container {
+  padding: 50px 30px 50px 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.footer-container__info {
+  max-width: 450px;
+}
+.footer-container__info-title {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.footer-container__info-text {
+  font-size: 12px;
+  color: white;
+}
+.footer-container__list {
+  display: flex;
+}
+.footer-container__list > li {
+  width: 30px;
+  padding: 0;
+}
+@media (max-width: 750px) {
+  .footer-container {
+    display: block;
+    text-align: center;
+    padding: 50px 20px 20px 20px;
+  }
+  .footer-container__info {
+    max-width: 100%;
+  }
+  .footer-container__list {
+    max-width: 100px;
+    margin: 15px auto 0px auto;
+  }
+}
