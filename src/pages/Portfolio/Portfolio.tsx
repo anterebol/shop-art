@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { PortfolioList } from '../../components/PortfolioList/PortfolioList';
 import './portfolio.css';
 const arr = [
@@ -30,7 +29,7 @@ export const Portfolio = () => {
     <div className="portfolio-box">
       {arr.map((portfolioSection, index) => (
         <PortfolioList
-          key={index}
+          key={portfolioSection.title + index}
           title={portfolioSection.title}
           images={portfolioSection.images}
         />

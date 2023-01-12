@@ -10,7 +10,7 @@ export const PortfolioList = (props) => {
         className={['page-portfolio__list', `container-${title}`].join(' ')}
         style={{
           gridTemplateRows: `repeat(${Math.ceil(
-            (images.length + 1) / document.documentElement.scrollWidth > 1000 ? 4 : 2
+            images.length / (document.documentElement.scrollWidth > 1000 ? 4 : 2)
           )}, ${document.documentElement.scrollWidth > 1000 ? '20vw' : '40vw'})`,
         }}
       >

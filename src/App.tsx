@@ -5,7 +5,7 @@ import { Portfolio } from './pages/Portfolio/Portfolio';
 import { pathes } from './constants/url';
 import { About } from './pages/About/About';
 import { Shop } from './pages/Shop/Shop';
-import { Blog } from './pages/Current/Blog';
+import { Blog } from './pages/Blog/Blog';
 
 const { shop, about, blog, portfolio } = pathes;
 function App() {
