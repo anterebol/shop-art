@@ -29,7 +29,8 @@ export const FullPage = ({ children }: { children: JSX.Element }) => {
   return (
     <>
       <Header />
-      <main className={pathname === '/' ? '' : 'container px-0'}>{children}</main>
+      {/* <main className={'page-portfolio'}>{children}</main> */}
+      <main className={pathname === '/' ? '' : 'page-portfolio'}>{children}</main>
       <div className="down"></div>
       <Footer />
     </>
