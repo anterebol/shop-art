@@ -4,18 +4,6 @@ import { useLocation } from 'react-router-dom';
 import './fullPage.css';
 import { useEffect } from 'react';
 
-// const addClass = (path) => {
-//   const pathArr = [];
-//   switch (path) {
-//     case '/':
-//       return;
-//     case '/portfolio':
-//       pathArr.push('main-portfolio');
-//   }
-//   pathArr.push('container');
-//   return pathArr.join(' ');
-// };
-
 export const FullPage = ({ children }: { children: JSX.Element }) => {
   const { pathname } = useLocation();
   useEffect(() => {
