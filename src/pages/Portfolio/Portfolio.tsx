@@ -5,11 +5,10 @@ import { useAppSelector } from '../../hooks/hooks';
 
 export const Portfolio = () => {
   const portfolio = useAppSelector((state) => state.appReducer.portfolio);
+  const arrImages = [...portfolio.map((portfolioBlock) => portfolioBlock.images)].flat();
   return (
     <>
-      <PortfolioPopup
-        portfolioImages={[...portfolio.map((portfolioBlock) => portfolioBlock.images)].flat()}
-      />
+      <PortfolioPopup portfolioImages={arrImages} />
       <div className="portfolio-box">
         {portfolio.map((portfolioSection, index) => (
           <PortfolioList

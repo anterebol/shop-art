@@ -6,8 +6,12 @@
   right: 0;
   background: black;
   z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+}
+.portfolio-hover.opened-popup {
   opacity: .5;
-  /* visibility: hidden; */
+  visibility: visible;
 }
 .portfolio-btn-popup {
   width: 50px;
@@ -21,6 +25,15 @@
   align-items: center;
   cursor: pointer;
   transition: ease .3s;
+}
+.popup-cross {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.popup-cross:hover {
+  opacity: .7;
 }
 .portfolio-btn-popup:hover {
   opacity: 1;
@@ -39,8 +52,12 @@
   right: 0;
   /* background: black; */
   z-index: 1000;
-  /* opacity: .5; */
-  /* visibility: hidden; */
+  opacity: 0;
+  visibility: hidden;
+}
+.portfolio-popup.opened-popup {
+  opacity: 1;
+  visibility: visible;
 }
 .portfolio-popup__body {
   margin: 0 auto;

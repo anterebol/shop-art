@@ -24,6 +24,7 @@ const initialState = {
     },
   ],
   openedPortfolioImage: 0,
+  popupOpened: false,
 };
 
 const appSlice = createSlice({
@@ -33,8 +34,11 @@ const appSlice = createSlice({
     changePortfolioImage: (state, action) => {
       state.openedPortfolioImage = action.payload;
     },
+    openPopup: (state, action) => {
+      state.popupOpened = action.payload;
+    },
   },
 });
 
 export default appSlice.reducer;
-export const { changePortfolioImage } = appSlice.actions;
+export const { changePortfolioImage, openPopup } = appSlice.actions;

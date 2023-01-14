@@ -1,7 +1,7 @@
 export const PortfolioImg = (props) => {
-  const { link } = props;
+  const { link, func } = props;
   return (
-    <li className="page-portfolio__list-box">
+    <li onClick={() => func()} className="page-portfolio__list-box">
       <div className="page-portfolio__list-hover"></div>
       <div
         className="page-portfolio__list-art"

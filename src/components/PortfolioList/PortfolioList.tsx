@@ -1,8 +1,15 @@
 import './portfolioList.css';
 import { PortfolioImg } from './PortfolioImg';
+import { useAppDispatch } from '../../hooks/hooks';
+import { openPopup, changePortfolioImage } from '../../store/appReducer';
 
 export const PortfolioList = (props) => {
   const { title, images } = props;
+  const dispatch = useAppDispatch();
+  const openPopupPortfolio = (imgNumber) => {
+    dispatch(changePortfolioImage(imgNumber));
+    dispatch(openPopup(true));
+  };
   return (
     <div className="page-portfolio__container">
       <h3 className="page-portfolio__container-title">{title}</h3>
@@ -14,8 +21,8 @@ export const PortfolioList = (props) => {
           )}, ${document.documentElement.scrollWidth > 1000 ? '20vw' : '40vw'})`,
         }}
       >
-        {images.map((img) => (
-          <PortfolioImg key={img} link={img} />
+        {images.map((img, index) => (
+          <PortfolioImg key={img} link={img} func={() => openPopupPortfolio(index)} />
         ))}
       </ul>
     </div>
